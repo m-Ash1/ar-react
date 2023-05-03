@@ -1,14 +1,21 @@
 import "./App.css";
-import Navbar from "./components/navbar";
-import Sidebar from "./components/Sidebar";
+import Card from "./components/Card.jsx";
 function App() {
-  const title = "Welcome to Ash's personal blog";
-  const link = "https://www.google.com";
+  const boys = [
+    { name: "Ash", level: 127, type: "Archer" },
+    { name: "Fathy", level: 97, type: "Ninja" },
+    { name: "Ahmed", level: 112, type: "Fighter" },
+  ];
+  const girls = [
+    { name: "Aya", level: 127, type: "Archer" },
+    { name: "Dodo", level: 97, type: "Healer" },
+    { name: "Haneen", level: 112, type: "Fighter" },
+  ];
+
   return (
-    <div className="App">
-      <Navbar />
-      <div className="content">CONTENT</div>
-      <Sidebar />
+    <div className="mainContainer">
+      <Card info={boys} gender="boy" />
+      <Card info={girls} gender="girl" />
     </div>
   );
 }
